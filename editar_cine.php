@@ -218,7 +218,7 @@ body { background-color:#999;}
  
         <fieldset style="width: 90%; font-weight: bold;"    >
             <legend>EDITAR EL CINE SELECCIONADO</legend>
-          <form action="actualizar_empleado.php" method="post" id="formulario1" onsubmit="return ValidaFormulario()">
+          <form action="actualizar_cine.php" method="post" id="formulario1" onsubmit="return ValidaFormulario()">
 		  <?php
             foreach ($rows as $row) {}
 			//Imprimimos en la página EL UNICO REGISTRO de MySQL en un renglon de HTML

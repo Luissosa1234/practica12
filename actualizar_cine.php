@@ -169,7 +169,7 @@ body { background-color:#999;}
                          <b>Domicilio de cine:</b> <?php echo ($domicilio); ?>
                     <br />
                     <br />
-                    <a href="reporte_para_editar_pdo.php">EDITAR OTRO EMPLEADO</a>
+                    <a href="reporte_para_editar_cine.php">EDITAR OTRO EMPLEADO</a>
                 </div>
         </fieldset> 
      </div>

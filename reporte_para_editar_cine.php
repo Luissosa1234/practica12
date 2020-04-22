@@ -156,7 +156,7 @@ body { background-color:#999;}
                 </td>
                 
                 <!-- CELDA 2 para la ilga de EDITAR -->
-                 <td><a href="editar_empleados.php?id=
+                 <td><a href="editar_cine.php?id=
 				 <?php echo $row['id_cine']; ?>">
 				        editar
                      </a>
