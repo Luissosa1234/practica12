@@ -145,6 +145,7 @@ body { background-color:#999;}
                 <td><?php echo $row['no_salas']; ?></td>
                 <td><?php echo $row['telefono_cine']; ?></td>
                 <td><?php echo $row['domicilio_cine']; ?></td>
+                <td><?php echo $row['correo_cine']; ?></td>
                 
     
                 <!-- CELDA 1 para la ilga de BORRAR -->

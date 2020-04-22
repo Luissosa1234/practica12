@@ -261,12 +261,12 @@ body { background-color:#999;}
                     <br />
                     <br />
 					Telefono de cine: 
-                    <input type="text" name="txtnombre" id="txtnombre" size="40" 
+                    <input type="text" name="txttelefono" id="txttelefono" size="40" 
                     value="<?php echo $row['telefono_cine']; ?>" />
                     <br />
                     <br />
 					Domicilio de cine: 
-                    <input type="text" name="txtnombre" id="txtnombre" size="40" 
+                    <input type="text" name="txtdomicilio" id="txtdomicilio" size="40" 
                     value="<?php echo $row['domicilio_cine']; ?>" />
                     <br />
                     <br />
@@ -275,7 +275,7 @@ body { background-color:#999;}
                     <br />
                    
                     
-                      <input type="hidden" name="txtnumeroOCULTO" id="txtnumeroOCULTO" value="<?php echo $row['numero']; ?>" />
+                      <input type="hidden" name="txtnumeroOCULTO" id="txtnumeroOCULTO" value="<?php echo $row['id_cine']; ?>" />
                       <input type="submit" name="AddEmpleado" id="AddEmpleado" value="  Guardar cambios " />
                     <br />
                 </div>
