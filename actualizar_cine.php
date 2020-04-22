@@ -12,7 +12,7 @@
 	$telefono = trim($_POST["txttelefono"]);
 	$departamento = $_POST["combo_departamento"];
 	
-	echo ">>>>>>>>>>>>>>>".$departamento;
+	
     // Escribimos la consulta para ACTUALIZAR LOS DATOS EN LA TABLA de empleados
     $sqlUPDATE  = "UPDATE cines SET nombre_cine = '$nombre', no_salas = $salas, 
 	               correo_cine = '$correo', domicilio_cine = '$domicilio', 
