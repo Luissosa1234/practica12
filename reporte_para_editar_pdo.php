@@ -1,12 +1,23 @@
 <?php
     //Insertamos el código PHP donde nos conectamos a la base de datos *******************************
-    require_once "conexion.php";
+    require_once "conn_mysql_alan.php";
     // Escribimos la consulta para recuperar los registros de la tabla de MySQL
-    $sql = 'SELECT E.numero, E.nombre, E.salario, E.categoria, E.sexo, D.descripcion FROM empleados E ';
-	$sql2 = $sql . 'INNER JOIN departamentos D ON E.departamento = D.departamento';
+	$sql = 
+	'SELECT 
+	C.id_cine, 
+	C.nombre_cine, 
+	C.no_salas, 
+	C.domicilio_cine, 
+	C.telefono_cine, 
+	C.correo_cine, 
+	D.id_municipio, 
+	D.municipio 
+	FROM cines C 
+	INNER JOIN 
+	municipios D ON C.id_cine = D.id_municipio';
 
     // Ejecutamos la consulta y asignamos el resultado a la variable llamada $result
-    $result = $conn->query($sql2);
+    $result = $conn->query($sql);
       
     // Recuperamos los valores o registros de la variable $result y los asignamos a la variable $rows
     $rows = $result->fetchAll();
@@ -114,10 +125,10 @@ body { background-color:#999;}
             <tr>
                 <th>ID</th>
                 <th>Nombre</th>
-                <th>Salario</th>
-                <th>Categoria</th>
-                <th>Sexo</th>
-                <th>Departamento</th>
+                <th># Salas</th>
+                <th>Telefono</th>
+                <th>Domicilio</th>
+                <th>Correo</th>
                 <th>Eliminar</th>
                 <th>Editar</th>
             </tr>
@@ -129,20 +140,11 @@ body { background-color:#999;}
 			//Imprimimos en la p�gina un renglon de tabla HTML por cada registro de tabla de MySQL
         ?>
             <tr>
-                <td><?php echo $row['numero']; ?></td>
-                <td><?php echo $row['nombre']; ?></td>
-                <td><?php echo $row['salario']; ?></td>
-                <td><?php echo $row['categoria']; ?></td>
-                 <?php
-					$sexo = $row['sexo'];
-					if ($sexo == "M"){
-						$sexo2 = "Masculino";
-					} else {
-						$sexo2 = "Femenino";
-					}
-				?>
-                <td><?php echo ($sexo2); ?></td>
-                <td><?php echo $row['descripcion']; ?></td>
+                <td><?php echo $row['id_cine']; ?></td>
+                <td><?php echo $row['nombre_cine']; ?></td>
+                <td><?php echo $row['no_salas']; ?></td>
+                <td><?php echo $row['telefono_cine']; ?></td>
+                <td><?php echo $row['domicilio_cine']; ?></td>
                 
     
                 <!-- CELDA 1 para la ilga de BORRAR -->
@@ -154,7 +156,7 @@ body { background-color:#999;}
                 
                 <!-- CELDA 2 para la ilga de EDITAR -->
                  <td><a href="editar_empleados.php?id=
-				 <?php echo $row['numero']; ?>">
+				 <?php echo $row['id_cine']; ?>">
 				        editar
                      </a>
                 </td>
