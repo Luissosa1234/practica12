@@ -1,6 +1,6 @@
 <?php
     //Insertamos el código PHP donde nos conectamos a la base de datos *******************************
-    require_once "conn_mysql_alan.php";
+    require_once "pag/conn_mysql_alan.php";
     // Escribimos la consulta para recuperar los registros de la tabla de MySQL
 	$sql = 
 	'SELECT 
@@ -31,92 +31,23 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Regitro de registros a eliminar</title>
+<title>Practica 12 Actualizar</title>
+<link rel="stylesheet" href="css/style.css">
 
-<style type="text/css" media="screen">
-
-body { background-color:#999;}
-
-#wrapper {
-	margin: auto;
-	width: 960px;
-	height:auto;
-	background-color: #CCC;
-	}
-	
-#caja1 {
-	width: 300px;
-	height: 60px;
-	margin-left: 10px;
-	margin-right: 10px;
-	margin-top: 10px;
-	background-color: #FFC;
-	float: left;
-}
-
-#caja2 {
-	width: 300px;
-	height: 60px;
-	margin-left: 10px;
-	margin-right: 10px;
-	margin-top: 10px;
-	background-color: #FFC;
-	float: left;
-}
-
-#caja3 {
-	width: 300px;
-	height: 60px;
-	margin-left: 10px;
-	margin-right: 10px;
-	margin-top: 10px;
-	background-color: #FFC;
-	float: left;
-}
-
-#caja4 {
-	width: 940px;
-	height:400px;
-	margin-left: 10px;
-	margin-right: 10px;
-	margin-top: 40px;
-	background-color: #333;
-	clear: both;
-	/*
-		 position:absolute; 
-		 top:200px;
-    */
-		 
-	position: relative;
-	top: 10px;
-	}
-	
-#imagen1 { position:relative; top:10px; right:-10px; }
-
-#texto1 {
-	width: 900px;
-	margin-left: 5px;
-	margin-right: 10px;
-	margin-top: 10px;
-	background-color: #CCC;
-	padding: 5px;
-	float: right;
-	right: -10px;
-	top: 10px;
-	}
-
-</style>
 
 </head>
 
 <body>
 
+<header class="logo">
+         <img src="img/logo.png" alt="cinepolis">
+        
+            </header>
+
+        
+
 <div id="wrapper">
 
-   <div id="caja1">Licenciatura en Tecnolog&iacute;as de la Informaci&oacute;n</div>
-   <div id="caja2">Programaci&oacute;n web</div>
-   <div id="caja3">Reporte de registros de una tabla para ser ACTUALIZADOS en l&iacute;nea (PHP con PDP y MySQL)</div>
- 
    <div id="caja4">
      <div id="texto1"><br>
  
@@ -129,7 +60,7 @@ body { background-color:#999;}
                 <th>Telefono</th>
                 <th>Domicilio</th>
                 <th>Correo</th>
-                <th>Eliminar</th>
+          
                 <th>Editar</th>
             </tr>
         </thead>
@@ -148,15 +79,10 @@ body { background-color:#999;}
                 <td><?php echo $row['correo_cine']; ?></td>
                 
     
-                <!-- CELDA 1 para la ilga de BORRAR -->
-                <td><a href="eliminar_empleado.php?id=
-				 <?php echo $row['numero']; ?>">
-				       eliminar
-                    </a>
-                </td>
+              
                 
                 <!-- CELDA 2 para la ilga de EDITAR -->
-                 <td><a href="editar_cine.php?id=
+                 <td><a href="pag/editar_cine.php?id=
 				 <?php echo $row['id_cine']; ?>">
 				        editar
                      </a>
@@ -171,10 +97,7 @@ body { background-color:#999;}
                 <td colspan="8">&nbsp;</td>
          </tr>
          <tr>
-                <td>&nbsp;</td>
-                <td><a href="alta_empleados.php">Agregar otro empleado</a></td>
-                <td>&nbsp;</td>
-                <td colspan="5">&nbsp;</td>
+              
          </tr>   
         </tbody>
     </table>

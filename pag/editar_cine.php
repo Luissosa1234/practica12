@@ -69,91 +69,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Regitro de empleados desde PHP hacia MySQL</title>
+<title>Practica 12 UPDATE en MYSQL</title>
+<link rel="stylesheet" href="../css/style.css">
 
-<style type="text/css" media="screen">
 
-body { background-color:#999;}
-
-#wrapper {
-	margin: auto;
-	width: 960px;
-	height: 550px;
-	background-color: #CCC;
-	}
-	
-#caja1 {
-	width: 300px;
-	height: 50px;
-	margin-left: 10px;
-	margin-right: 10px;
-	margin-top: 10px;
-	background-color: #FFC;
-	float: left;
-}
-
-#caja2 {
-	width: 300px;
-	height: 50px;
-	margin-left: 10px;
-	margin-right: 10px;
-	margin-top: 10px;
-	background-color: #FFC;
-	float: left;
-}
-
-#caja3 {
-	width: 300px;
-	height: 50px;
-	margin-left: 10px;
-	margin-right: 10px;
-	margin-top: 10px;
-	background-color: #FFC;
-	float: left;
-}
-
-#caja4 {
-	width: 940px;
-	height: 450px;
-	margin-left: 10px;
-	margin-right: 10px;
-	margin-top: 40px;
-	background-color: #333;
-	clear: both;
-	/*
-		 position:absolute; 
-		 top:200px;
-		 */
-		 
-	position: relative;
-	top: 10px;
-	}
-	
-#imagen1 { position:relative; top:10px; right:-10px; }
-
-#texto1 {
-	width: 500px;
-	height: 400px;
-	margin-left: 5px;
-	margin-right: 10px;
-	margin-top: 10px;
-	background-color: #CCC;
-	padding: 5px;
-	float: right;
-	right: -10px;
-	top: 10px;
-	}
-	
-#AddEmpleado{ 
-    position: absolute;
-    right: 50px;
-    border:3px solid #009;
-    padding: 10px;
-}
-
-</style>
-
-<script language="javascript">
+<script language="javascript" >
   <!--
 	  function ValidaFormulario()
 	  {
@@ -169,7 +89,7 @@ body { background-color:#999;}
 		 var valorCorreo = document.getElementById("txtcategoria").value;
 		 //Caja de Texto ****************************************************************
          if (valorNombre == null || valorNombre.length == 0 || /^\s+$/.test(valorNombre)){
-			 alert("Debes escribir el nombre del empleado");
+			 alert("Debes escribir el nombre del cine");
 			 document.getElementById("txtnombre").focus();
              return false;	 
 	     } 
@@ -205,13 +125,16 @@ body { background-color:#999;}
 </head>
 
 <body>
+<header class="logo">
+         <img src="../img/logo.png" alt="cinepolis">
+        
+            </header>
+
+          
 
 <div id="wrapper">
 
-   <div id="caja1">Licenciatura en Tecnologías de la Información</div>
-   <div id="caja2">Programación web</div>
-   <div id="caja3">Formulario para editar la información de los empleados en la BD desde una página web</div>
- 
+  
    <div id="caja4">
      <div id="texto1"><br>
  
